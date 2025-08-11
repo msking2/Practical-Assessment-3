@@ -41,6 +41,7 @@ The objective is to **identify clients likely to subscribe** to a term deposit b
 
 3. **Evaluation on Dataset 2**
    - Final model tested on the second dataset to simulate performance on new data
+   - Models refined using `Pipeline` and hyperparameter tuning with `GridSearchCV` to assess performance on new dataset
 
 ---
 

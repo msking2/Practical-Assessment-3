@@ -34,7 +34,7 @@ The objective is to **identify clients likely to subscribe** to a term deposit b
    - Categorical features encoded with `OneHotEncoder`
    - Data split into training and test sets using `train_test_split`
 
-2. **Modeling**
+2. **Modeling on Dataset 1**
    - Models built using `Pipeline` and hyperparameter tuning with `GridSearchCV`
    - Evaluation metrics: **accuracy**, **precision**, **recall**, and **F1 score**
    - Confusion matrix, **ROC curves**, and **Precision-Recall curves** for model interpretation
@@ -46,44 +46,52 @@ The objective is to **identify clients likely to subscribe** to a term deposit b
 
 ## Best Model
 
-While the Decision Tree (Gini, max_depth = 5) had the **best F1 score**, the **Support Vector Machine (SVC)** had the **highest precision**, which is more important for our goal: **targeting likely subscribers**.
+While the Decision Tree ( max_depth = 5) had the*best F1 score on dataset 1 & 2, the SVC had the highest precision on dataset 1 & 2, which is more important for our goal: targeting likely subscribers.
 
-### Final Model: **Support Vector Classifier**
-- **Kernel**: RBF
-- **C**: 1
-- **Gamma**: scale
-- **Precision**: ~75.7%
-- **Recall**: ~44.1%
+### Final Model: Support Vector Classifier
+- Kernel: RBF
+- C: 1
+- Gamma: scale
+- Precision: ~75.7%
+- Recall: ~44.1%
 
 > SVC was selected due to its superior precision — even though it takes longer to train — because it better minimizes false positives, saving acquisition costs for the bank.
 
 ---
 
-## Metrics Overview
+## Dataset 1: Metrics Overview
 
-| Model               | Accuracy | Precision | Recall | F1 Score | Fit Time |
-|--------------------|----------|-----------|--------|----------|----------|
-| KNN                | ~90.0%   | 60.0%     | 41.6%  | 49.2%    | Fast     |
-| LogisticRegression | ~90.7%   | 66.0%     | 39.8%  | 49.7%    | Fast     |
-| **SVC (Best)**     | ~90.9%   | **75.7%** | 44.1%  | 55.6%    | Slow     |
-| Decision Tree      | ~91.2%   | 66.4%     | 47.9%  | **56.5%**| Fast     |
+| Model                | Accuracy    | Precision | Recall     | F1 Score |    Fit Time    |
+|----------------------|-------------|-----------|------------|----------|----------------|
+| KNN                  | 90.0%       | 60.0%     | 41.6%      | 49.2%    | 1.52 (Fast)    |
+| LogisticRegression   | 90.7%       | 66.0%     | 39.8%      | 49.7%    | 0.47 (Fast)    |
+| SVC                  | 90.9%       | **67.4%** | 41.2%      | 51.2%    | 12.5 (Slow)    |
+| Decision Tree (Best) | **91.2%**   | 66.4%     |** 47.9%**  | **56.5%**| 0.33 (Fast)    |
 
+## Dataset 2: Metrics Overview
+
+| Model               |Accuracy | Precision | Recall | F1 Score |    
+|---------------------|---------|-----------|--------|----------|
+| KNN                 | 91.8%   | 68.5%     | 46.3%  | 55.3%    |
+| LogisticRegression  | 91.5%   | 68.3%     | 42.1%  | 52.1%    |
+| **SVC (Best)**      | 90.9%   | **67.4%** | 41.2%  | 51.2%    |
+| Decision Tree       | 92.0%   | 68.2%     | 50.8%  | **58.2%**|
 ---
 
 ## Visualizations
 
+- Model Performance by Comparison
+- Average Fit Time by Model
 - Confusion Matrix
-- ROC Curve
 - Precision-Recall Curve
-- Feature Importances (for Decision Tree)
+- ROC Curve
 
 ---
 
 ## Next Steps
 
 - Perform deeper hyperparameter tuning on individual models
-- Explore feature engineering (e.g., `PolynomialFeatures`)
-- Use additional evaluation metrics like AUC-PR
+- Explore additional feature engineering (e.g., `PolynomialFeatures`)
 - Collect more representative data to improve generalization
 
 ---
@@ -95,8 +103,3 @@ Improving prediction of which clients are likely to subscribe helps the bank:
 - Focus efforts on high-potential leads
 - Increase efficiency of marketing campaigns
 
-
-
-Install requirements:
-
-```bash

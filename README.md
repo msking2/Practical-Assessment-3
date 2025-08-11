@@ -47,7 +47,7 @@ The objective is to **identify clients likely to subscribe** to a term deposit b
 
 ## Best Model
 
-While the Decision Tree ( max_depth = 5) had the*best F1 score on dataset 1 & 2, the SVC had the highest precision on dataset 1 & 2, which is more important for our goal: targeting likely subscribers.
+While the Decision Tree ( max_depth = 5) had the best F1 score on dataset 1 & 2, the SVC had the highest precision on dataset 1 & 2, which is more important for our goal: targeting likely subscribers.
 
 ### Final Model: Support Vector Classifier
 - Kernel: RBF
@@ -75,7 +75,7 @@ While the Decision Tree ( max_depth = 5) had the*best F1 score on dataset 1 & 2,
 |---------------------|---------|-----------|--------|----------|
 | KNN                 | 91.8%   | 68.5%     | 46.3%  | 55.3%    |
 | LogisticRegression  | 91.5%   | 68.3%     | 42.1%  | 52.1%    |
-| **SVC (Best)**      | 90.9%   | **67.4%** | 41.2%  | 51.2%    |
+| **SVC (Best)**      | 92.3%   | **75.7%** | 44.1%  | 55.7%    |
 | Decision Tree       | 92.0%   | 68.2%     | 50.8%  | **58.2%**|
 ---
 

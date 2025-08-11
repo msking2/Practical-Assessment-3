@@ -80,11 +80,30 @@ While the Decision Tree ( max_depth = 5) had the*best F1 score on dataset 1 & 2,
 
 ## Visualizations
 
-- Model Performance by Comparison
-- Average Fit Time by Model
-- Confusion Matrix
-- Precision-Recall Curve
-- ROC Curve
+Correlation Heatmap
+
+<img width="400" height="325" alt="image" src="https://github.com/user-attachments/assets/0c41102e-3bf4-47af-a9bb-bde1de4a8070" />
+
+Model Performance by Comparison
+
+<img width="400" height="325" alt="image" src="https://github.com/user-attachments/assets/47a42e67-99ff-4355-a5ad-f1e2e240a3fd" />
+
+Average Fit Time by Model
+
+<img width="400" height="325" alt="image" src="https://github.com/user-attachments/assets/b522e317-14f3-49aa-bb40-5c47712bacfd" />
+
+Confusion Matrix - Dataset 1: Decision Tree
+
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/2018226e-6662-42d6-a892-1166ff24b159" />
+
+Precision-Recall Curve - Dataset 1: Decision Tree
+
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/c6ae6eb1-6216-4a44-8964-b6b18ffdab05" />
+
+ROC Curve - Dataset 1: Decision Tree
+
+<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/1a74af96-a0dc-4142-96d1-73a6a0432961" />
+
 
 ---
 
